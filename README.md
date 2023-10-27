@@ -42,7 +42,9 @@ See pictures
 | DELETE                     | 	/runningPlan /:runningPlanId               | DESTROY     | delete runner with id of :runningPlanId          |       |
 
 ## Wireframes of all user views
-See pictures
+![Home Page][https://github.com/nholliday314/Project-2/blob/213c2c725c72b65836129191cb69eef967936aa9/Wirefram.drawio.png]
+
+
 
 
 ## User Stories
