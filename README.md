@@ -1,4 +1,4 @@
-# Project 2 Running Planner
+# Project 2 - Running Planner
 
 This second project will be my first adventure into building a full-stack application. I'll be building a Node/Express/MongoDB app from the ground up.
 
@@ -9,13 +9,36 @@ While training for races, it's important to plan accordingly, whether it's a 5k 
 3. End users will be able to also view who has favorited or joined a race
 
 
-## choice of API you are going to use and a proof of concept (API keys -- hitting the api)
+## API
 https://runsignup.com/Api/races/GET 
 https://runsignup.com/API/race/:race_id/GET
+URL: https://runsignup.com/rest/races 
+
+```
+{
+    "name": "Seattle Marathon",
+    "state": "WA",
+    "city": "Srattle",
+    "event_type": "Marathon",
+    "min_distance": "13.1 Miles",
+    "race_links": "https://www.seattlemarathon.org/",
+    ...
+}
+```
+
+
+## Tech Required
+* HTML/CSS
+* JavaScript
+* MongoDB
+* Mongoose
+* Node.js
+* Express
+* Passport
+
 
 ## ERDs
 See pictures
-
 
 
 ## Restful Routing Chart
@@ -42,21 +65,19 @@ See pictures
 | DELETE                     | 	/runningPlan /:runningPlanId               | DESTROY     | delete runner with id of :runningPlanId          |       |
 
 ## Wireframes of all user views
-![Home Page](https://github.com/nholliday314/Project-2/blob/213c2c725c72b65836129191cb69eef967936aa9/Wirefram.drawio.png)
-
-
+![Home Page](https://github.com/nholliday314/Project-2/blob/main/Wirefram.drawio.png?raw=true)
 
 
 ## User Stories
 * Users can view, favorite, and join races
 * Users can see who has favorited and joined races
-* Users can view, add, edit running plans
-* User can view calendar with populated race and running plan info
+* Users can view, add, edit running plans by run type, distance, pace, and specific deatil
 
 
 ## MVP goals/Stretch Goals
 * Filter races based off of distance and location (state)
 * Allow users to comment on races
+* Include calendar view of races and running plans
 
 
 
