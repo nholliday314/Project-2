@@ -38,7 +38,7 @@ URL: https://runsignup.com/rest/races
 
 
 ## ERDs
-See pictures
+![ERD](https://github.com/nholliday314/Project-2/blob/main/ERD.drawio.png?raw=true)
 
 
 ## Restful Routing Chart
