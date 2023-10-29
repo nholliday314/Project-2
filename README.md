@@ -65,7 +65,11 @@ URL: https://runsignup.com/rest/races
 | DELETE                     | 	/runningPlan /:runningPlanId               | DESTROY     | delete runner with id of :runningPlanId          |       |
 
 ## Wireframes of all user views
-![Home Page](https://github.com/nholliday314/Project-2/blob/main/Wirefram.drawio.png?raw=true)
+![Home Page](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
+![Races](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
+![Races](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
+![Home Page](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
+![Home Page](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
 
 
 ## User Stories
