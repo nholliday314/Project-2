@@ -65,11 +65,13 @@ URL: https://runsignup.com/rest/races
 | DELETE                     | 	/runningPlan /:runningPlanId               | DESTROY     | delete runner with id of :runningPlanId          |       |
 
 ## Wireframes of all user views
-![Home Page](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
-![Races](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
-![Races](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
-![Home Page](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
-![Home Page](/Users/nathanholliday/code/projects/project-2-oAuth-template/wireframe/home.png)
+![Home Page](https://github.com/nholliday314/Project-2/blob/main/wireframe/home.png?raw=true)
+![Races](https://github.com/nholliday314/Project-2/blob/main/wireframe/races.png?raw=true)
+![Races Popup](https://github.com/nholliday314/Project-2/blob/main/wireframe/races-popup.png?raw=true)
+![My Race Planner](https://github.com/nholliday314/Project-2/blob/main/wireframe/my-race-planner.png?raw=true)
+![My Race Planner - Run](https://github.com/nholliday314/Project-2/blob/main/wireframe/my-race-plan-run.png?raw=true)
+![My Race Planner - Calendar](https://github.com/nholliday314/Project-2/blob/main/wireframe/my-race-planner-calendar.png?raw=true)
+
 
 
 ## User Stories
