@@ -77,11 +77,19 @@ URL: https://runsignup.com/rest/races
 ## User Stories
 * Users can view, favorite, and join races
 * Users can see who has favorited and joined races
-* Users can view, add, edit running plans by run type, distance, pace, and specific deatil
+* Users can view, add, edit running plans by run type, distance, pace, and specific detals
 
 
-## MVP goals/Stretch Goals
-* Filter races based off of distance and location (state)
+## MVP goals
+* Have a home page displaying the following
+    * Upcoming Races
+    * Running Plans
+* Have a seperate page for both races and running plans
+* Allow users to add and edit both races and running plans
+
+
+## Stretch Goals
+* Connect racing API to allow user to add races 
 * Allow users to comment on races
 * Include calendar view of races and running plans
 
