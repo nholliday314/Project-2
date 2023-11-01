@@ -5,6 +5,10 @@ const indexRouter = require("../controllers/index.js")
 
 router.get('/', indexRouter.index);
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'wtf' });
+});
+
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   // Which passport strategy is being used?

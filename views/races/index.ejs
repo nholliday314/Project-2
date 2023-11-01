@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h2>Races Home Page</h2>
+
+<ul>
+  <% races.forEach(function(t) { %>
+    <li>
+      <form 
+        action="/races/<%= t.id %>?_method=DELETE"
+        class="delete-form" 
+        method="POST"
+        >
+          <button type="submit">X</button>
+      </form>
+      <a href="/races/<%= t.id %>"><%= t.race %></a>
+        - 
+      <%= t.done ? 'done' : 'not done' %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/races/new">Add Race</a>
+
+<%- include('../partials/footer') %>
