@@ -6,7 +6,6 @@ const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 
-var raceRouter = require('./routes/races');
 
 require('dotenv').config();
 require('./config/database');
@@ -14,8 +13,21 @@ require('./config/database');
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
+const raceRouter = require('./routes/races');
+const racePlannerRouter = require('./routes/racePlanner');
 
 const app = express();
+
+app.use('/races', raceRouter)
+app.use('/racePlanner', racePlannerRouter)
+
+// setting up pages
+app.get('/races', (req, res) => {
+  res.send('Races Pages')
+})
+app.get('/raceplanner', (req, res) => {
+  res.send('Race Planner')
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
