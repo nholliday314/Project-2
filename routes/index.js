@@ -2,11 +2,26 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const indexRouter = require("../controllers/index.js")
+const Race = require('../models/race');
 
-router.get('/', indexRouter.index);
-
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'wtf' });
+router.get('/', async (req, res) => {
+  try {
+    // TODO: use current passport user to get raceIds of current user -> if no races, return empty 
+    
+    if (req?.user) {
+        const { raceIds } = req?.user
+        if (raceIds.length > 0) {
+            const races = await Race.find({ _id: { $in: raceIds } });
+            res.locals.races = races
+        }
+    }
+    res.render("index", {
+      title: "Running Planner"
+    });
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Failed to get races.' });
+}
 });
 
 // Google OAuth login route

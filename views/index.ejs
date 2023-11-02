@@ -1,8 +1,5 @@
 <%- include('./partials/header') %>
 
-<h2>Races</h2>
-<h2>Running Plans</h2>
-
 <% if (!user) { %>
 	<p>please login to continue</p>
 <% } else { %>
@@ -10,6 +7,41 @@
 	<% if (user.avatar) { %>
 		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
 	<% } %>
+
+	<h2>Races</h2>  
+	<h3>Add New Race</h3>
+	<form action="/races/createRace" method="POST" autocomplete="off">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		
+		<label for="date">Date:</label>
+		<input type="text" id="date" name="date" required>
+		
+		<label for="distance">Distance:</label>
+		<input type="text" id="distance" name="distance" required>
+		
+		<button type="submit">Save</button>
+	  </form>
+	  
+	  <% if (races.length > 0) { %>
+		<ul>
+		  <% races.forEach(function(race) { %>
+			<li>
+			  <h2><%= race.name %></h2>
+			  <p><%= race.distance %></p>
+			  <p><%= race.date %></p>
+			  <form action="/races/delete/<%= race.id %>" method="POST" autocomplete="off">
+				<button type="submit">Delete Race</button>
+			  </form>
+			</li>
+
+		  <% }); %>
+		</ul>
+	  <% } else { %>
+		<p>No items to display.</p>
+	  <% } %>
+	
+
 <% } %>
 
 <%- include('./partials/footer') %>

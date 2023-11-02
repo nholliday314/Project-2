@@ -3,7 +3,11 @@ module.exports = {
 }
 
 function index(req, res) {
-  res.render("index", {
-    title: "Running Planner"
-  });
+
+  // TODO: check if user exists 
+  // if it does - call the endpoint to get and set races
+
+
+
+  
 }

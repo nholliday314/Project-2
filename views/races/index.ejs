@@ -1,23 +1,20 @@
 <%- include('../partials/header') %>
 
-<h2>Races Home Page</h2>
+<h1>Races Page</h1>
 
-<ul>
-  <% races.forEach(function(t) { %>
-    <li>
-      <form 
-        action="/races/<%= t.id %>?_method=DELETE"
-        class="delete-form" 
-        method="POST"
-        >
-          <button type="submit">X</button>
-      </form>
-      <a href="/races/<%= t.id %>"><%= t.race %></a>
-        - 
-      <%= t.done ? 'done' : 'not done' %>
-    </li>
-  <% }); %>
-</ul>
-<a href="/races/new">Add Races</a>
+<% if (races.length > 0) { %>
+    <ul>
+      <% races.forEach(function(race) { %>
+        <li>
+          <h2><%= race.name %></h2>
+          <p><%= race.distance %></p>
+          <p><%= race.date %></p>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No items to display.</p>
+  <% } %>
+ 
 
 <%- include('../partials/footer') %>

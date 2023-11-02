@@ -1,4 +1,4 @@
-const Race = require('../models/race');
+const Race = require('../models/raceOld');
 
 // controllers/race.js
 
@@ -32,7 +32,6 @@ const Race = require('../models/race');
   }
 	
   function create(req, res) {
-    console.log(req.body);
     // The model is responsible for creating data
     Race.create(req.body);
     // Do a redirect anytime data is changed

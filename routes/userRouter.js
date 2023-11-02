@@ -16,6 +16,7 @@ try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
         // TODO: be able to access user object in rest of application
+        // check if user exists but doesn't have raceIds array -> update 
         user = existingUser
     } else {
         // TODO: create new user
@@ -31,5 +32,7 @@ try {
     res.status(500).json({ error: 'Failed to create a user.' });
 }
 });  
+
+
 
 module.exports = router;

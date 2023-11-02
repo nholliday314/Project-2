@@ -19,13 +19,16 @@ passport.use(new GoogleStrategy(
       // A user has logged in with OAuth...
       let user = await User.findOne({ googleId: profile.id });
       // Existing user found, so provide it to passport
-      if (user) return cb(null, user);
+      if (user) {
+        return cb(null, user);
+      }
       // We have a new user via OAuth!
       user = await User.create({
         name: profile.displayName,
         googleId: profile.id,
         email: profile.emails[0].value,
-        avatar: profile.photos[0].value
+        avatar: profile.photos[0].value,
+        raceIds: []
       });
       return cb(null, user);
     } catch (err) {
