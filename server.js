@@ -5,18 +5,27 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
-
+const mongoose = require('mongoose');
 
 require('dotenv').config();
 require('./config/database');
-
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const raceRouter = require('./routes/races');
 const racePlannerRouter = require('./routes/racePlanner');
+const userRouter = require('./routes/userRouter');
 
+// App connection 
 const app = express();
+
+// TODO: connect to Mongodb 
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+
+
+// TODO: connect our routers 
+app.use('/user', userRouter)
+
 
 app.use('/races', raceRouter)
 app.use('/racePlanner', racePlannerRouter)
@@ -52,6 +61,7 @@ app.use(passport.session());
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
 	res.locals.user = req.user;
+  console.log(res.locals.user)
   next();
 });
 
